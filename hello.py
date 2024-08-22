@@ -17,7 +17,10 @@ class Employee:
         return self._empID
 
     def setEmpID(self, empID):
-        self._empID = empID
+        try:
+            self._empID = int(empID)
+        except ValueError:
+            print("Invalid value entered!")
 
     def __repr__(self):
         return f'{self._name} is employee with {self._empID} empID'
@@ -25,5 +28,13 @@ class Employee:
 if __name__=='__main__':
 
     employee = Employee("Mulyo Santoso", 1101)
+
+    print(employee.__repr__())
+
+    new_name = input("New employee name: ")
+    employee.setName(new_name)
+
+    new_id = input("New employee ID: ")
+    employee.setEmpID(new_id)
 
     print(employee.__repr__())
