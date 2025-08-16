@@ -9,7 +9,7 @@ This repository only contain README.md to demonstrate interaction git into Githu
 - Checking status
   ```bash
   git status
-- Commit change, after editing the README.md
+- Commit change, after editing the README.md 
   ```bash
   git commit -m "Reshaping the repository"
 - Push into Github
